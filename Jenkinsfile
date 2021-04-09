@@ -24,7 +24,7 @@ node {
       // login Azure
       withCredentials([usernamePassword(credentialsId: 'AzureJavaApp', passwordVariable: '7OrdfrdVLAaM.QBxuKyku5T3SvYDmQEth~', usernameVariable: 'f33bb4bc-37d9-4337-810c-77051744116e')]) {
        sh '''
-          az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
+          az login --service-principal -u f33bb4bc-37d9-4337-810c-77051744116e -p 7OrdfrdVLAaM.QBxuKyku5T3SvYDmQEth~ -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
         '''
       }
